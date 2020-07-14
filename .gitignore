@@ -19,6 +19,8 @@ resources/data/no-policy
 # Build artifacts
 target/
 charts/*.tgz
+kafka/
+zookeeper/
 
 # Other common patterns to ignore
 *.iml
