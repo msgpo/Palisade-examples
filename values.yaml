@@ -33,6 +33,19 @@ global:
   # repository: the name of the docker image repository that is the source of local application images that was populated during the project build process and will now be referenced in the pods
   repository: palisade
 
+  kafka:
+    # install: install kafka streaming platform
+    install: false
+  traefik:
+    # install: install the traefik ingress controller, this should be true for the first installation into the cluster as it resides in kube-system to provide a single cluster-wide ingress controller
+    install: true
+  metrics-server:
+    # install: install the metrics server, this should be true for the first installation into the cluster as it resides in kube-system to provide a single cluster-wide metrics server
+    install: false
+  dashboard:
+    # install: install routing through the ingress controller to a pre-installed kubernetes dashboard i.e. https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+    install: false
+
   # guarantee the data we are expecting is mounted appropriately
   persistence:
     classpathJars:
